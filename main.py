@@ -1,11 +1,7 @@
 from py5paisa import FivePaisaClient
-from py5paisa.order import Order, OrderType, Exchange
-import requests
-import pandas as pd
-import datetime
-from dateutil.relativedelta import relativedelta
-import time
 from decouple import config
+from info import Info
+from order import Order
 
 # Load variables from the .env file
 APP_NAME = config('APP_NAME')
@@ -28,3 +24,8 @@ cred = {
 client = FivePaisaClient(email=config('EMAIL'), passwd=config('PASSWD'),
                          dob=config('DOB'), cred=cred)
 client.login()
+
+market_info = Info(client)
+order = Order(client)
+
+print(market_info.get_market_status())
