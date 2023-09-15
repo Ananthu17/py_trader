@@ -139,17 +139,6 @@ class Order:
 # print(order.place_order(OrderType='B', Exchange='N', ExchangeType='C',
 #                         ScripCode=1660, Qty=1, Price=325, AHPlaced="Y"))
 
-
-
-# Place a bracket order for buying 1 share of scrip code 5097
-# with LimitPrice=51.10, TargetPrice=52.0, StopLossPrice=50.00, LimitPriceForSL=49.90,
-# TrailingSL=0.5, and IsIntraday=True
-
-# print(order.bo_order(OrderType='B', Exchange='N', ExchangeType='C', ScripCode=5097,
-#                      Qty=1, LimitPrice=51.10, TargetPrice=52.0,
-#                      StopLossPrice=50.00, LimitPriceForSL=49.90, TrailingSL=0.5, IsIntraday=True))
-
-
 # Modify an existing order with ExchOrderID "1100000017861430" to have Qty=2 and Price=261
 # print(order.modify_order(ExchOrderID="1100000017861430", Qty=2, Price=261))
 
